@@ -51,7 +51,27 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
+            },
+            "staging": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -64,6 +84,9 @@
             },
             "development": {
               "browserTarget": "injection-token-example:build:development"
+            },
+            "staging": {
+              "browserTarget": "injection-token-example:build:staging"
             }
           },
           "defaultConfiguration": "development"
@@ -94,5 +117,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "99a54db3-98c2-4543-810e-391db35d7c61"
   }
 }
